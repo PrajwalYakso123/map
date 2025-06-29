@@ -2,7 +2,7 @@
 
 // export default HospitalMap;
 import React from 'react';
-import { MapContainer, Polyline, Popup, Tooltip } from 'react-leaflet';
+import { MapContainer, Polyline, Popup, Tooltip, TileLayer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import hospitalPaths from '../Data/Hospitalpaths'; // Adjust path if needed
 
@@ -22,8 +22,13 @@ const HospitalMap = () => {
         center={position} 
         zoom={25  } 
         className="h-full w-full" 
-        style={{ backgroundColor: '#f0f0f0' }} // light gray background
+        //style={{ backgroundColor: '#f0f0f0' }} // background removed after adding OpenStreetMap Tile layer
+        scrollWheelZoom={true}
       >
+      <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      />
         {hospitalPaths.features.map((feature, index) => {
           const isBuilding = buildingNames.includes(feature.properties.name);
 
