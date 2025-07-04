@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { MapContainer, TileLayer, Polyline, Tooltip } from 'react-leaflet';
 import hospitalPaths from '../Data/HospitalPaths';
 import 'leaflet/dist/leaflet.css';
+import AnimatedPath from './AnimatedPath';
 
 const HospitalMap = () => {
     const [selectedPath, setSelectedPath] = useState(null);
@@ -34,15 +35,17 @@ const HospitalMap = () => {
                         const coords = feature.geometry.coordinates.map(([lng, lat]) => [lat, lng]);
                         const isSelected = selectedPath === feature.properties.name;
 
-                        return (
+                        return isSelected ? (
+                            <AnimatedPath key={index} positions={coords} />
+                        ) : (
                             <Polyline
                                 key={index}
                                 positions={coords}
                                 pathOptions={{
-                                    color: isSelected ? 'blue' : 'gray',
-                                    weight: isSelected ? 5 : 3,
-                                    opacity: isSelected ? 1 : 0.5,
-                                    dashArray: isSelected ? null : '4'
+                                    color: 'gray',
+                                    weight: 2,
+                                    opacity: 0.6,
+                                    dashArray: '4'
                                 }}
                             >
                                 <Tooltip permanent>{feature.properties.name}</Tooltip>
