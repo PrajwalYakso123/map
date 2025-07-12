@@ -4,19 +4,19 @@ import { useMap } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet-ant-path';
 
-const AnimatedPath = ({ positions, color = '#00f', pulseColor = '#0ff' }) => {
+const AnimatedPath = ({ positions, color = '#0f0', pulseColor = '#0ff' }) => {
     const map = useMap();
 
     useEffect(() => {
         const antPath = L.polyline.antPath(positions, {
-            "delay": 400,
-            "dashArray": [10, 20],
-            "weight": 5,
-            "color": color,
-            "pulseColor": pulseColor,
-            "paused": false,
-            "reverse": false,
-            "hardwareAccelerated": true
+            delay: 400,
+            dashArray: [10, 20],
+            weight: 5,
+            color: color,
+            pulseColor: pulseColor,
+            paused: false,
+            reverse: false,
+            hardwareAccelerated: true
         });
 
         antPath.addTo(map);
@@ -30,3 +30,4 @@ const AnimatedPath = ({ positions, color = '#00f', pulseColor = '#0ff' }) => {
 };
 
 export default AnimatedPath;
+

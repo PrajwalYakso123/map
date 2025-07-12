@@ -7,7 +7,7 @@ import 'leaflet/dist/leaflet.css';
 function App() {
   return (
     <div className="p-4">
-      <h1 className="text-xl font-bold">🏥 Hospital Map </h1>
+      <h1 className="text-xl font-bold">🏥 BPKIHS PATH MAP</h1>
       <HospitalMap />
     </div>
   );

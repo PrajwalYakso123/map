@@ -1,8 +1,19 @@
 import React, { useState } from 'react';
-import { MapContainer, TileLayer, Polyline, Tooltip } from 'react-leaflet';
-import hospitalPaths from '../Data/HospitalPaths';
+import { MapContainer, TileLayer, Polyline, Tooltip, GeoJSON } from 'react-leaflet';
+import hospitalPaths from '../Data/Hospitalpaths';
 import 'leaflet/dist/leaflet.css';
 import AnimatedPath from './AnimatedPath';
+
+ const styleFeature = (feature) => {
+  const isSelected = selectedPath === feature.properties.name;
+  const fillColor = feature.properties.color || '#ccc';
+  return {
+    color: isSelected ? 'blue' : '#000', // border color
+    fillColor: fillColor,                // fill inside
+    weight: isSelected ? 3 : 2,
+    fillOpacity: isSelected ? 0.8 : 0.6
+  };
+};
 
 const HospitalMap = () => {
     const [selectedPath, setSelectedPath] = useState(null);
@@ -11,6 +22,17 @@ const HospitalMap = () => {
     const handleSelect = (e) => {
         setSelectedPath(e.target.value);
     };
+
+    const styleFeature = (feature) => {
+    const isSelected = selectedPath === feature.properties.name;
+    const fillColor = feature.properties.color || '#ccc';
+    return {
+      color: isSelected ? 'blue' : fillColor,     // border color
+      fillColor: fillColor,                       // fill inside
+      weight: isSelected ? 3 : 2,
+      fillOpacity: isSelected ? 0.8 : 0.6
+    };
+  };
 
     return (
         <div className="w-full mt-4">
@@ -30,8 +52,9 @@ const HospitalMap = () => {
                         attribution='&copy; <a href="https://openstreetmap.org">OpenStreetMap</a> contributors'
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     />
-
-                    {hospitalPaths.features.map((feature, index) => {
+                    {hospitalPaths.features
+                    .filter(feature => feature.geometry.type === 'LineString') 
+                    .map((feature, index) => {
                         const coords = feature.geometry.coordinates.map(([lng, lat]) => [lat, lng]);
                         const isSelected = selectedPath === feature.properties.name;
 
@@ -52,6 +75,8 @@ const HospitalMap = () => {
                             </Polyline>
                         );
                     })}
+                    
+
                 </MapContainer>
             </div>
         </div>
@@ -59,3 +84,14 @@ const HospitalMap = () => {
 };
 
 export default HospitalMap;
+
+
+
+
+
+
+
+
+
+
+
