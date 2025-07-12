@@ -4,6 +4,13 @@ import hospitalPaths from '../Data/HospitalPaths';
 import 'leaflet/dist/leaflet.css';
 import AnimatedPath from './AnimatedPath';
 
+
+const buildingNames = [
+    "Bill Counter", "Main Gate", "Emergency", "OPD",
+    "Hospital Pharmacy", "Hospital Canteen", "Gate2", "BPKIHS"
+];
+
+
 const HospitalMap = () => {
     const [selectedPath, setSelectedPath] = useState(null);
     const center = [26.8120, 87.2689];
@@ -31,27 +38,35 @@ const HospitalMap = () => {
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     />
 
-                    {hospitalPaths.features.map((feature, index) => {
-                        const coords = feature.geometry.coordinates.map(([lng, lat]) => [lat, lng]);
-                        const isSelected = selectedPath === feature.properties.name;
+                    {hospitalPaths.features
+                        .filter(f => !selectedPath || f.properties.name === selectedPath)
+                        .map((feature, index) => {
+                            const coords = feature.geometry.coordinates.map(([lng, lat]) => [lat, lng]);
+                            const name = feature.properties.name;
+                            const isBuilding = buildingNames.includes(name);
 
-                        return isSelected ? (
-                            <AnimatedPath key={index} positions={coords} />
-                        ) : (
-                            <Polyline
-                                key={index}
-                                positions={coords}
-                                pathOptions={{
-                                    color: 'gray',
-                                    weight: 2,
-                                    opacity: 0.6,
-                                    dashArray: '4'
-                                }}
-                            >
-                                <Tooltip permanent>{feature.properties.name}</Tooltip>
-                            </Polyline>
-                        );
-                    })}
+                            if (isBuilding) {
+                                // Show building only if selected
+                                return (
+                                    <Polyline
+                                        key={index}
+                                        positions={coords}
+                                        pathOptions={{
+                                            color: '#2b6cb0',
+                                            weight: 4,
+                                            opacity: 0.9
+                                        }}
+                                    >
+                                        <Tooltip permanent>{name}</Tooltip>
+                                    </Polyline>
+                                );
+                            }
+
+                            // For paths, animate if selected
+                            return (
+                                <AnimatedPath key={index} positions={coords} />
+                            );
+                        })}
                 </MapContainer>
             </div>
         </div>
