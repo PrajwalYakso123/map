@@ -1,6 +1,6 @@
 @import "tailwindcss";
 .custom-path {
-  stroke: rgb(147, 10, 10) !important;
+  stroke: rgb(206, 22, 22) !important;
   stroke-width: 4 !important;
 }
 

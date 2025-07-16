@@ -4,7 +4,7 @@ import { useMap } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet-ant-path';
 
-const AnimatedPath = ({ positions, color = '#0f0', pulseColor = '#0ff' }) => {
+const AnimatedPath = ({ positions, color = '#00FFFF', pulseColor = '#FFFFFF' }) => {
     const map = useMap();
 
     useEffect(() => {
