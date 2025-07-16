@@ -7,7 +7,7 @@ const hospitalPaths =
       type: "Feature",
       properties: {
         name: "Bill Counter",
-        color: "#ff0000" // red
+       
       },
       geometry: {
         type: "Polygon",
@@ -125,15 +125,15 @@ const hospitalPaths =
             26.811753434712173
           ]
         ],
-        // "type": "Linestring"
+        
       }
     },
-    
+
     {
       type: 'Feature',
       properties: {
         name: "Main Gate",
-        color: '#4CAF50' // green fill color
+        
       },
       geometry: {
         type: 'Polygon',
@@ -159,14 +159,14 @@ const hospitalPaths =
             26.81352475693896
           ]
         ],
-        // "type": "LineString"
+        
       }
     },
     
     {type: 'Feature',
       properties: {
         name: 'Emergency',
-        color: '#4CAF50' // green fill color
+      
       },
       geometry: {
         type: 'Polygon',
@@ -224,7 +224,7 @@ const hospitalPaths =
             26.812649829177374
           ]
         ],
-        // "type": "LineString"
+        
       }
     },
   
@@ -232,7 +232,7 @@ const hospitalPaths =
       type: 'Feature',
       properties: {
         name: 'OPD',
-        color: '#4CAF50' // green fill color
+       
       },
       geometry: {
         type: 'Polygon',
@@ -306,14 +306,13 @@ const hospitalPaths =
             26.812081620987698
           ]
         ],
-        // "type": "LineString"
+        
       }
     },
     {
       type: 'Feature',
       properties: {
         name: 'Hospital Pharmacy',
-        color: '#4CAF50' // green fill color
       },
       geometry: {
         type: 'Polygon',
@@ -399,14 +398,13 @@ const hospitalPaths =
             26.811757895339056
           ]
         ],
-        // "type": "LineString"
+        
       }
     },
      {
       type: 'Feature',
       properties: {
         name: 'Hospital Canteen',
-        color: '#4CAF50' // green fill color
       },
       geometry: {
         type: 'Polygon',
@@ -448,7 +446,7 @@ const hospitalPaths =
             26.811038953671556
           ]
         ],
-        // "type": "LineString"
+        
       }
     },
     
@@ -456,7 +454,6 @@ const hospitalPaths =
       type: 'Feature',
       properties: {
         name: 'Gate 2',
-        color: '#4CAF50' // green fill color
       },
       geometry: {
         type: 'Polygon',
@@ -482,7 +479,7 @@ const hospitalPaths =
             26.81370158914281
           ]
         ],
-        // "type": "LineString"
+        
       }
     
     },
@@ -491,7 +488,6 @@ const hospitalPaths =
       type: 'Feature',
       properties: {
         name: 'BPKIHS',
-        color: '#4CAF50' // green fill color
       },
       geometry: {
         type: 'Polygon',
@@ -549,265 +545,11 @@ const hospitalPaths =
             26.813506687374186
           ]
         ],
-        // "type": "LineString"
+      
       }
     },
    
-    // {
-    //   "type": "Feature",
-    //   "properties": {
-    //     "name": "Main path"
-    //   },
-    //   "geometry": {
-    //     "coordinates": [
-    //       [
-    //         87.26786493519552,
-    //         26.813660585193944
-    //       ],
-    //       [
-    //         87.26731740850511,
-    //         26.811538121435063
-    //       ],
-    //       [
-    //         87.26871111280678,
-    //         26.81119260031771
-    //       ],
-    //       [
-    //         87.2698835942046,
-    //         26.811133368020677
-    //       ],
-    //       [
-    //         87.27014353111838,
-    //         26.811311064819535
-    //       ],
-    //       [
-    //         87.27123305392496,
-    //         26.81273756513967
-    //       ],
-    //       [
-    //         87.27158701057425,
-    //         26.81318673626511
-    //       ],
-    //       [
-    //         87.27162572458275,
-    //         26.81340391727022
-    //       ],
-    //       [
-    //         87.27155382713858,
-    //         26.813690200686082
-    //       ]
-    //     ],
-    //     "type": "LineString"
-    //   }
-    // },
-    // {
-    //   "type": "Feature",
-    //   "properties": {
-    //     "name": "p1 to Emergency"
-    //   },
-    //   "geometry": {
-    //     "coordinates": [
-    //       [
-    //         87.26776679647134,
-    //         26.813274171784443
-    //       ],
-    //       [
-    //         87.26824276522802,
-    //         26.812961476335857
-    //       ],
-    //       [
-    //         87.26853363502357,
-    //         26.81332923756041
-    //       ],
-    //       [
-    //         87.26884654040941,
-    //         26.813126674038443
-    //       ],
-    //       [
-    //         87.26870771618854,
-    //         26.812963442976198
-    //       ],
-    //       [
-    //         87.26878043363638,
-    //         26.812904443739882
-    //       ]
-    //     ],
-    //     "type": "LineString"
-    //   }
-    // },
-    // {
-    //   "type": "Feature",
-    //   "properties": {"name": "p1 to OPD"},
-    //   "geometry": {
-    //     "coordinates": [
-    //       [
-    //         87.2682405613076,
-    //         26.812965410105207
-    //       ],
-    //       [
-    //         87.26809292285014,
-    //         26.812780545729666
-    //       ],
-    //       [
-    //         87.26848074924351,
-    //         26.81248948205935
-    //       ],
-    //       [
-    //         87.26840803179573,
-    //         26.812414749374923
-    //       ],
-    //       [
-    //         87.26846312077043,
-    //         26.81237738301425
-    //       ]
-    //     ],
-    //     "type": "LineString"
-    //   }
-    // },
-    // {
-    //   "type": "Feature",
-    //   "properties": {
-    //     "name": "p1 to BillCounter"
-    //   },
-    //   "geometry": {
-    //     "coordinates": [
-    //       [
-    //         87.26759193761922,
-    //         26.812595566083417
-    //       ],
-    //       [
-    //         87.26783212555512,
-    //         26.812422501006495
-    //       ],
-    //       [
-    //         87.26773076184008,
-    //         26.81229270202512
-    //       ],
-    //       [
-    //         87.26803705654692,
-    //         26.812078336715658
-    //       ],
-    //       [
-    //         87.26798637468943,
-    //         26.812029170302665
-    //       ],
-    //       [
-    //         87.26804807434314,
-    //         26.811991803814934
-    //       ]
-    //     ],
-    //     "type": "LineString"
-    //   }
-    // },
-    // {
-    //   "type": "Feature",
-    //   "properties": {
-    //   "name": "p to Hospital Pharmacy"
-    //   },
-    //   "geometry": {
-    //     "coordinates": [
-    //       [
-    //         87.26731489305439,
-    //         26.811542732839285
-    //       ],
-    //       [
-    //         87.26721664404909,
-    //         26.81157302461915
-    //       ],
-    //       [
-    //         87.26725772999623,
-    //         26.811788255453536
-    //       ],
-    //       [
-    //         87.26709695889633,
-    //         26.811813764266304
-    //       ]
-    //     ],
-    //     "type": "LineString"
-    //   }
-    // },
-    // {
-    //   "type": "Feature",
-    //   "properties": {
-    //   "name": "p to Hospital Canteen"
-    //   },
-    //   "geometry": {
-    //     "coordinates": [
-    //       [
-    //         87.26800686217945,
-    //         26.811366581065116
-    //       ],
-    //       [
-    //         87.2679229039374,
-    //         26.81117526407698
-    //       ]
-    //     ],
-    //     "type": "LineString"
-    //   }
-    // },
-    // {
-    //   "type": "Feature",
-    //   "properties": {
-    //     "name": "p2 to Bill Counter"
-    //   },
-    //   "geometry": {
-    //     "coordinates": [
-    //       [
-    //         87.2687239261574,
-    //         26.811195418553183
-    //       ],
-    //       [
-    //         87.26901440690165,
-    //         26.811501204198237
-    //       ],
-    //       [
-    //         87.26888406297763,
-    //         26.811574326729783
-    //       ]
-    //     ],
-    //     "type": "LineString"
-    //   }
-    // },
-    // {
-    //   "type": "Feature",
-    //   "properties": {
-    //     "name": "p2 to OPD"
-    //   },
-    //   "geometry": {
-    //     "coordinates": [
-    //       [
-    //         87.26873509844631,
-    //         26.81188675884215
-    //       ],
-    //       [
-    //         87.26879468423869,
-    //         26.8119864710347
-    //       ],
-    //       [
-    //         87.26870158143703,
-    //         26.812042974572208
-    //       ]
-    //     ],
-    //     "type": "LineString"
-    //   }
-    // },
-    // {
-    //   "type": "Feature",
-    //   "properties": {"name": "p2 to Emergency"},
-    //   "geometry": {
-    //     "coordinates": [
-    //       [
-    //         87.26879096012732,
-    //         26.811983147297028
-    //       ],
-    //       [
-    //         87.26907026853564,
-    //         26.81235540538583
-    //       ]
-    //     ],
-    //     "type": "LineString"
-    //   }
-    // },
+    
     {
         "type": "Feature",
         "properties": {
