@@ -7,7 +7,7 @@ import AnimatedPath from './AnimatedPath';
 
 
 const buildingNames = [
-  "Bill Counter", "Main Gate", "Emergency", "OPD",
+  "Building 3", "Main Gate", "Building 1", "Building 2",
   "Hospital Pharmacy", "Hospital Canteen", "Gate 2", "BPKIHS"
 ];
 const calculateDistance = (coords) => {

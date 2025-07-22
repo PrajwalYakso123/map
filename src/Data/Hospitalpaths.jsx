@@ -1,4 +1,5 @@
-import 'leaflet/dist/leaflet.css';
+
+   import 'leaflet/dist/leaflet.css';
 const hospitalPaths = 
 {
   "type": "FeatureCollection",
@@ -6,7 +7,7 @@ const hospitalPaths =
     {
       type: "Feature",
       properties: {
-        name: "Bill Counter",
+        name: "Building 3",
        
       },
       geometry: {
@@ -165,7 +166,7 @@ const hospitalPaths =
     
     {type: 'Feature',
       properties: {
-        name: 'Emergency',
+        name: 'Building 1',
       
       },
       geometry: {
@@ -231,7 +232,7 @@ const hospitalPaths =
      {
       type: 'Feature',
       properties: {
-        name: 'OPD',
+        name: 'Building 2',
        
       },
       geometry: {
@@ -548,14 +549,13 @@ const hospitalPaths =
       
       }
     },
-   
     
     {
         "type": "Feature",
         "properties": {
-          "name": " Main Gate to Emergency",
+          "name": " Main Gate to Building 1",
           "source": "Main Gate",
-        "destination": "Emergency",
+        "destination": "Building 1",
         },
         "geometry": {
           "coordinates": [
@@ -594,9 +594,9 @@ const hospitalPaths =
       {
         "type": "Feature",
         "properties": {
-          "name": "Main Gate to OPD",
+          "name": "Main Gate to Building 2",
           "source": "Main Gate",
-        "destination": "OPD",
+        "destination": "Building 2",
         },
         "geometry": {
           "coordinates": [
@@ -635,9 +635,9 @@ const hospitalPaths =
       {
         "type": "Feature",
         "properties": {
-          "name": "Main Gate to Bill Counter",
+          "name": "Main Gate to Building 3",
           "source": "Main Gate",
-        "destination": "Bill Counter",
+        "destination": "Building 3",
         },
         "geometry": {
           "coordinates": [
@@ -780,9 +780,9 @@ const hospitalPaths =
       {
         "type": "Feature",
         "properties": {
-          "name": "Emergency to OPD",
-          "source": "Emergency",
-        "destination": "OPD",
+          "name": "Building 1 to Building 2",
+          "source": "Building 1",
+        "destination": "Building 2",
         },
         "geometry": {
           "coordinates": [
@@ -805,9 +805,9 @@ const hospitalPaths =
       {
         "type": "Feature",
         "properties": {
-          "name": "Emergency to Bill Counter",
-          "source": "Emergency",
-        "destination": "Bill Counter",
+          "name": "Building 1 to Building 3",
+          "source": "Building 1",
+        "destination": "Building 3",
         },
         "geometry": {
           "coordinates": [
@@ -834,8 +834,8 @@ const hospitalPaths =
       {
         "type": "Feature",
         "properties": {
-          "name": "Emergency to Hospital Pharmacy",
-          "source": "Emergency",
+          "name": "Building 1 to Hospital Pharmacy",
+          "source": "Building 1",
         "destination": "Hospital Pharmacy",
         },
         "geometry": {
@@ -883,8 +883,8 @@ const hospitalPaths =
       {
         "type": "Feature",
         "properties": {
-          "name": "Emergency to Hospital Canteen",
-          "source": "Emergency",
+          "name": "Building 1 to Hospital Canteen",
+          "source": "Building 1",
         "destination": "Hospital Canteen",
         },
         "geometry": {
@@ -928,8 +928,8 @@ const hospitalPaths =
       {
         "type": "Feature",
         "properties": {
-          "name": "Emergency to Gate 2",
-          "source": "Emergency",
+          "name": "Building 1 to Gate 2",
+          "source": "Building 1",
         "destination": "Gate 2",
         },
         "geometry": {
@@ -977,8 +977,8 @@ const hospitalPaths =
       {
         "type": "Feature",
         "properties": {
-        "name": "OPD to Gate 2",
-        "source": "OPD",
+        "name": "Building 2 to Gate 2",
+        "source": "Building 2",
         "destination": "Gate 2",
         },
         "geometry": {
@@ -1034,8 +1034,8 @@ const hospitalPaths =
       {
         "type": "Feature",
         "properties": {
-        "name": "OPD to Hospital Canteen",
-        "source": "OPD",
+        "name": "Building 2 to Hospital Canteen",
+        "source": "Building 2",
         "destination": "Hospital Canteen",
         },
         "geometry": {
@@ -1075,9 +1075,9 @@ const hospitalPaths =
       {
         "type": "Feature",
         "properties": {
-        "name": "OPD to Bill Counter",
-        "source": "OPD",
-        "destination": "Bill Counter",
+        "name": "Building 2 to Building 3",
+        "source": "Building 2",
+        "destination": "Building 3",
         },
         "geometry": {
           "coordinates": [
@@ -1104,8 +1104,8 @@ const hospitalPaths =
       {
         "type": "Feature",
         "properties": {
-        "name": "OPD to Hospital Pharmacy",
-        "source": "OPD",
+        "name": "Building 2 to Hospital Pharmacy",
+        "source": "Building 2",
         "destination": "Hospital Pharmacy",
         },
         "geometry": {
@@ -1153,8 +1153,8 @@ const hospitalPaths =
       {
         "type": "Feature",
         "properties": {
-        "name": "Bill Counter to Hospital Pharmacy",
-        "source": "Bill Counter",
+        "name": "Building 3 to Hospital Pharmacy",
+        "source": "Building 3",
         "destination": "Hospital Pharmacy",
 
         },
@@ -1203,8 +1203,8 @@ const hospitalPaths =
       {
         "type": "Feature",
         "properties": {
-        "name": "Bill Counter to Hospital Canteen",
-        "source": "Bill Counter",
+        "name": "Building 3 to Hospital Canteen",
+        "source": "Building 3",
         "destination": "Hospital Canteen",
         },
         "geometry": {
@@ -1236,8 +1236,8 @@ const hospitalPaths =
       {
         "type": "Feature",
         "properties": {
-        "name": "Bill Counter to Gate 2",
-        "source": "Bill Counter",
+        "name": "Building 3 to Gate 2",
+        "source": "Building 3",
         "destination": "Gate 2",
           
         
@@ -1378,8 +1378,8 @@ const hospitalPaths =
       {
         "type": "Feature",
         "properties": {
-        "name": "Emergency to Main Gate",
-        "source": "Emergency",
+        "name": "Building 1 to Main Gate",
+        "source": "Building 1",
         "destination": "Main Gate",
         },
         "geometry": {
@@ -1419,8 +1419,8 @@ const hospitalPaths =
       {
         "type": "Feature",
         "properties": {
-        "name": "OPD to Main Gate",
-        "source": "OPD",
+        "name": "Building 2 to Main Gate",
+        "source": "Building 2",
         "destination": "Main Gate",
         },
         "geometry": {
@@ -1460,8 +1460,8 @@ const hospitalPaths =
       {
         "type": "Feature",
         "properties": {
-          "name": "Bill Counter to Main Gate",
-          "source": "Bill Counter",
+          "name": "Building 3 to Main Gate",
+          "source": "Building 3",
         "destination": "Main Gate",
         },
         "geometry": {
@@ -1605,9 +1605,9 @@ const hospitalPaths =
       {
         "type": "Feature",
         "properties": {
-          "name": "OPD to Emergency",
-          "source": "OPD",
-        "destination": "Emergency",
+          "name": "Building 2 to Building 1",
+          "source": "Building 2",
+        "destination": "Building 1",
         },
         "geometry": {
           "coordinates": [
@@ -1630,9 +1630,9 @@ const hospitalPaths =
       {
         "type": "Feature",
         "properties": {
-          "name": "Bill Counter to Emergency",
-          "source": "Bill Counter",
-        "destination": "Emergency",
+          "name": "Building 3 to Building 1",
+          "source": "Building 3",
+        "destination": "Building 1",
         },
         "geometry": {
           "coordinates": [
@@ -1659,9 +1659,9 @@ const hospitalPaths =
       {
         "type": "Feature",
         "properties": {
-          "name": "Hospital Pharmacy to Emergency",
+          "name": "Hospital Pharmacy to Building 1",
           "source": "Hospital Pharmacy",
-        "destination": "Emergency",
+        "destination": "Building 1",
         },
         "geometry": {
           "coordinates": [
@@ -1708,9 +1708,9 @@ const hospitalPaths =
       {
         "type": "Feature",
         "properties": {
-          "name": "Hospital Canteen to Emergency",
+          "name": "Hospital Canteen to Building 1",
           "source": "Hospital Canteen",
-        "destination": "Emergency",
+        "destination": "Building 1",
         },
         "geometry": {
           "coordinates": [
@@ -1753,9 +1753,9 @@ const hospitalPaths =
       {
         "type": "Feature",
         "properties": {
-          "name": " Gate 2 to Emergency",
+          "name": " Gate 2 to Building 1",
           "source": "Gate 2 ",
-        "destination": "Emergency",
+        "destination": "Building 1",
         },
         "geometry": {
           "coordinates": [
@@ -1802,9 +1802,9 @@ const hospitalPaths =
       {
         "type": "Feature",
         "properties": {
-        "name": "Gate 2 to OPD",
+        "name": "Gate 2 to Building 2",
         "source": "Gate 2",
-        "destination": "OPD",
+        "destination": "Building 2",
         },
         "geometry": {
           "coordinates": [
@@ -1859,9 +1859,9 @@ const hospitalPaths =
       {
         "type": "Feature",
         "properties": {
-        "name": "Hospital Canteen to OPD",
+        "name": "Hospital Canteen to Building 2",
         "source": "Hospital Canteen",
-        "destination": "OPD",
+        "destination": "Building 2",
         },
         "geometry": {
           "coordinates": [
@@ -1900,9 +1900,9 @@ const hospitalPaths =
       {
         "type": "Feature",
         "properties": {
-        "name": "Bill Counter to OPD",
-        "source": "Bill Counter",
-        "destination": "OPD",
+        "name": "Building 3 to BUilding 2",
+        "source": "Building 3",
+        "destination": "Building 2",
         },
         "geometry": {
           "coordinates": [
@@ -1929,9 +1929,9 @@ const hospitalPaths =
       {
         "type": "Feature",
         "properties": {
-        "name": "Hospital Pharmacy to OPD",
+        "name": "Hospital Pharmacy to Building 2",
         "source": "Hospital Pharmacy",
-        "destination": "OPD",
+        "destination": "Building 2",
         },
         "geometry": {
           "coordinates": [
@@ -1978,9 +1978,9 @@ const hospitalPaths =
       {
         "type": "Feature",
         "properties": {
-        "name": "Hospital Pharmacy to Bill Counter",
+        "name": "Hospital Pharmacy to Building 3",
         "source": "Hospital Pharmacy",
-        "destination": "Bill Counter",
+        "destination": "Building 3",
 
         },
         "geometry": {
@@ -2028,9 +2028,9 @@ const hospitalPaths =
       {
         "type": "Feature",
         "properties": {
-        "name": "Hospital Canteen to Bill Counter",
+        "name": "Hospital Canteen to Building 3",
         "source": "Hospital Canteen",
-        "destination": "Bill Counter",
+        "destination": "Building 3",
         },
         "geometry": {
           "coordinates": [
@@ -2061,9 +2061,9 @@ const hospitalPaths =
       {
         "type": "Feature",
         "properties": {
-        "name": "Gate 2 to Bill Counter",
+        "name": "Gate 2 to Building 3",
         "source": "Gate 2",
-        "destination": "Bill Counter",
+        "destination": "Building 3",
           
         
         },
