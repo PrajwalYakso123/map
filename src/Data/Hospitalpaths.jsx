@@ -7,8 +7,7 @@ const hospitalPaths =
     {
       type: "Feature",
       properties: {
-        name: "Building 3",
-       
+        name: "Building 3",  
       },
       geometry: {
         type: "Polygon",

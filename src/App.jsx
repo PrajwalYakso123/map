@@ -1,8 +1,7 @@
 import React from 'react';
 import HospitalMap from './Components/HospitalMap';
 import 'leaflet/dist/leaflet.css';
-// import MainGatePaths from './Components/MainGatePaths';
-// import 'index.css';
+
 
 
 function App() {

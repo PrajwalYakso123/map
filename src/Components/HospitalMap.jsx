@@ -129,24 +129,7 @@ const HospitalMap = () => {
                 [0, 0]
             );
 
-            // Generate small circular loop around the center
-            const radius = 0.00008;
-            const loopCoords = Array.from({ length: 13 }, (_, i) => {
-                const angle = (i / 12) * 2 * Math.PI;
-                return [
-                center[0] + radius * Math.sin(angle),
-                center[1] + radius * Math.cos(angle),
-                ];
-            });
-
-            return (
-                <Polyline
-                positions={loopCoords}
-                pathOptions={{ color: 'red', weight: 3, dashArray: '6, 6' }}
-                >
-                <Tooltip permanent>{`${initialPoint} (Self-loop)`}</Tooltip>
-                </Polyline>
-            );
+           
             })()}
 
 
